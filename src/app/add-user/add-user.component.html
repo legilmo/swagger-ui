@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add User</h2>
+  <form #f="ngForm" (ngSubmit)="addUser(f.value)">
+    
+    <div class="form-group">
+      <input type="hidden" [(ngModel)]="user.id" placeholder="User Id" name="User Id" class="form-control" id="id">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="name" [(ngModel)]="user.firstName" minlength="3" maxlength="50" required
+             placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+  
+    <div class="form-group">
+      <label for="lastName">Last  Name:</label>
+      <input type="name" [(ngModel)]="user.lastName"  minlength="3" maxlength="50" required
+             placeholder="Last Name" name="lastName" class="form-control" id="lastName">
+    </div>
+
+    <button type="submit" class="btn btn-success" >Add Confirm</button>
+    <button type="reset" class="btn btn-success" >reset</button>
+  </form>
+  </div>
